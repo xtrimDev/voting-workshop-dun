@@ -1,4 +1,8 @@
-# voting
+# voting program
+
+Part 1 - Initialisation
+Part 2 - 
+
 
 ## Getting Started
 
