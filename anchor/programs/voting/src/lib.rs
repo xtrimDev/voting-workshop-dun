@@ -28,8 +28,16 @@ pub mod voting {
                                 _poll_id: u64
                             ) -> Result<()> {
         let candidate = &mut ctx.accounts.candidate;
+        
+        // to let it Mutable
+        let poll = &mut ctx.accounts.poll;
+
         candidate.candidate_name = candidate_name;
         candidate.candidate_votes = 0;
+
+        // Increasing the candidate count in the poll
+        poll.candidate_amount += 1;
+        
         Ok(())
     }
 
